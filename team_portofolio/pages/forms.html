@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Registration Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TEAM 7 SPONTAN</title>
 </head>
 <body style="margin:0; padding:0; background: white; color: black;">
 
-    <header style = "background-color: blue; color: white; text-align: center; padding: 20px;">
-      <h1>Student Registration Form</h1>
-      <nav style = "margin-top: 10px;">
-      <span style = "margin-right:20px"><a href = "#pinformation" style = "color: white;text-decoration: none;">Personal Information</a></span>
-      <span style = "margin-right:20px"><a href = "#acinformation" style = "color: white;text-decoration: none;">Academic Information</a></span>
-      <span style = "margin-right:20px"><a href = "#adinformation" style = "color: white;text-decoration: none;">Additional Information</a></span>
-        </nav>
-    </header>
+  <header style="background-color: #0000ff; color: white; text-align: center; padding: 20px;">
+    <h1>MY TEAM MY ADVENTURE</h1>
+    <nav style="margin-top: 10px;">
+      <span style="margin-right:20px"><a href="#pinformation" style="color: white; text-decoration: none;">Home</a></span>
+      <span style="padding: 10px;">|</span>
+      <span style="margin-right:20px"><a href="#pinformation" style="color: white; text-decoration: none;">Personal Information</a></span>
+      <span style="padding: 10px;">|</span>
+      <span style="margin-right:20px"><a href="forms.html" style="color: white; text-decoration: none;">Form Contact</a></span>
+    </nav>
+  </header>
 
-<main style="max-width: 700px; margin: 30px auto; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px gray;">
-    <form action="#" method="post">
+  <main style="max-width: 700px; margin: 30px auto; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px gray;">
+    <h2 style="text-align: center; color:#0000ff ;"><strong>Contact Us!</strong></h2>
+    <p style="text-align: center; max-width: 700px; margin: 10px auto;">
+      Fill out this form to tell us more about your website idea, goals, and expectations.<br>
+      Our team is professional and ready to help you bring your vision to life!
+    </p>
+    <nav aria-label="Page Sections" style="text-align: center; margin-bottom: 40px;">
+      <a href="#pinformation" style="text-decoration: none; color: #0000ff;">Personal Information</a>
+      <span style="margin: 0 10px; color: black;">|</span>
+      <a href="#projectinformation" style="text-decoration: none; color: #0000ff;">About Your Project</a>
+      <span style="margin: 0 10px; color: black;">|</span>
+      <a href="#expectation" style="text-decoration: none; color: #0000ff;">Timeline and Expectations</a>
+    </nav>
+    <form action="#" method="post" enctype="multipart/form-data">
 
-      <!--Personal Information-->
+      <!-- Personal Information -->
       <section id="pinformation" style="margin-bottom: 30px;">
-        <h2 style="border-bottom: 2px solid #0066cc; padding-bottom: 5px;">Personal Information</h2>
+        <h2 style="border-bottom: 2px solid #0000ff; padding-bottom: 5px;">Personal Information</h2>
         <article style="line-height: 1.8;">
-          <label for="name">Full Name:</label><br>
-          <input type="text" required = "This field is required" id="name" name="name" placeholder="Enter your full name" style="width:97%; padding:8px;"><br><br>
+          <label for="full-name">Full Name:</label><br>
+          <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required style="width:97%; padding:8px;"><br><br>
 
-          <label for="NISN">NISN:</label><br>
-          <input type="number" min ="0" max="10" required = "This field is required" id="NISN" name="NISN" placeholder="Enter your NISN" style="width:97%; padding:8px;"><br><br>
+          <label for="email">E-mail:</label><br>
+          <input type="email" id="email" name="email" placeholder="Enter your e-mail address" required style="width:97%; padding:8px;"><br><br>
 
-          <label for ="birthdate">Tanggal Lahir:</label><br>
-          <input type ="date" id ="birthdate" name ="birthdate" style="width:97%; padding:8px;"><br><br>
+          <label for="birthdate">Birthdate:</label><br>
+          <input type="date" id="birthdate" name="birthdate" style="width:97%; padding:8px;"><br><br>
 
           <label>Gender:</label><br>
-          <input type ="radio" style="transform: scale(1.2);" id ="Laki-Laki" name="gender" value="Laki-Laki"><label for="Laki-Laki">Laki-Laki</label>
-          <input type ="radio" style="transform: scale(1.2);" id ="Perempuan" name="gender" value="Perempuan"><label for="Perempuan">Perempuan</label><br><br>
+          <input type="radio" id="gender-male" name="gender" value="male" style="transform: scale(1.2);" required>
+          <label for="gender-male">Laki-Laki</label>
+          <input type="radio" id="gender-female" name="gender" value="female" style="transform: scale(1.2);">
+          <label for="gender-female">Perempuan</label><br><br>
 
-          <label for ="agama">Religion:</label><br>
-          <select id ="agama" name ="agama" required = "" style ="width: 100%; height: 35px;">
+          <label for="religion">Religion:</label><br>
+          <select id="religion" name="religion" required style="width: 100%; height: 35px;">
+            <option value="">-- Pilih Agama --</option>
             <option value="Islam">Islam</option>
             <option value="Kristen Katolik">Kristen Katolik</option>
             <option value="Kristen Protestan">Kristen Protestan</option>
@@ -47,60 +64,67 @@
           </select><br><br>
 
           <label for="address">Address:</label><br>
-          <input type="text" required = "This field is required" id="address" name="address" placeholder="Enter your Address" style="width:97%; padding:8px;"><br><br>
+          <input type="text" id="address" name="address" placeholder="Enter your Address" required style="width:97%; padding:8px;"><br><br>
 
-          <label for="phnum">Phone number:</label><br>
-          <input type="tel" required = "This field is required" id="phnum" name="phnum" placeholder="Enter your Phone Number" style="width:97%; padding:8px;"><br><br>
-
-          <label for="KTP">National ID number:</label><br>
-          <input type="number" min ="0" max ="16" required = "" id="KTP" name="KTP" placeholder="Enter your ID Number" style="width:97%; padding:8px;"><br><br>
-
-      <!--Academic Innformation-->>
-      <section id="acinformation" style="margin-bottom: 30px;">
-        <h2 style="border-bottom: 2px solid #0066cc; padding-bottom: 5px;">Academic Information</h2>
-        <article style="line-height: 1.8;">
-          <label for="lastschool">Previous School:</label><br>
-          <input type="text" required = "" id="lastschool" name="lastschool" placeholder="Enter your Previous School" style="width:97%; padding:8px;"><br><br>
-
-          <label for="schooladd">Previous School:</label><br>
-          <input type="text" required = "" id="schooladd" name="schooladd" placeholder="Enter your School Adress" style="width:97%; padding:8px;"><br><br>  
-          
-          <label for ="major">Major:</label><br>
-          <select id ="major" name ="major" required = "" style ="width: 100%; height: 35px;">
-            <option value="IPA">IPA</option>
-            <option value="IPS">IPS</option>
-            <option value="Sastra">Sastra</option>
-          </select><br><br>
-
-          <label for ="diploma">Last Diploma:</label>
-          <input type = "file" name = "diploma"><br><br>
+          <label for="phone">Phone number:</label><br>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" required style="width:97%; padding:8px;"><br><br>
+        </article>
       </section>
 
-
-
-      <!--Additional Information-->
-      <section id="adinformation" style="margin-bottom: 30px;">
-        <h2 style="border-bottom: 2px solid #0066cc; padding-bottom: 5px;">Additional Information</h2>
+      <!-- Project Information -->
+      <section id="projectinformation" style="margin-bottom: 30px;">
+        <h2 style="border-bottom: 2px solid #0066cc; padding-bottom: 5px;">About Your Project</h2>
         <article style="line-height: 1.8;">
-          <label for="parent">Parent's/Guardians Name:</label><br>
-          <input type="text" required = "" id="parent" name="parent" placeholder="Enter your Parent or Guardian Name" style="width:97%; padding:8px;"><br><br>       
+          <label for="website-type" style="margin-top: 10px;">What type of website do you want to build?</label>
+          <select id="website-type" name="websiteType" required style="width: 100%; height: 35px;">
+            <option value="">-- Choose one --</option>
+            <option value="portfolio">Portfolio Website</option>
+            <option value="business">Business Website</option>
+            <option value="ecommerce">E-Commerce Site</option>
+            <option value="blog">Blog</option>
+            <option value="custom">Custom Web App</option>
+          </select><br><br>
 
-          <label for="parentoccupation">Parent's/Guardians Name:</label><br>
-          <input type="text" required = "" id="parentoccupation" name="parentoccupation" placeholder="Enter Parent or Guardian Occupation" style="width:97%; padding:8px;"><br><br>
+          <label>Do you have the design material?:</label><br>
+          <input type="radio" id="design-yes" name="designProvided" value="yes" style="transform: scale(1.2);">
+          <label for="design-yes">Yes</label>
+          <input type="radio" id="design-no" name="designProvided" value="no" style="transform: scale(1.2);">
+          <label for="design-no">No</label><br><br>
 
-          <label for="parentconcact">Parent's/Guardians Name:</label><br>
-          <input type="text" required = "" id="parentconcact" name="parentconcact" placeholder="Enter your Parent or Guardian Concact" style="width:97%; padding:8px;"><br><br>
+          <label for="goals" style="margin-top: 15px;">Project Goals/Description:</label>
+          <textarea id="goals" name="goals" rows="4" placeholder="Describe what you want to achieve..." required style="width: 97%; padding: 8px;"></textarea><br><br>
 
-          <label for ="medical">Medical Condition:</label><br>
-          <textarea id="medical" name = "medical" rows="10" cols="92" width="100%"></textarea>
+          <label for="reference">Upload your Reference:</label>
+          <input type="file" id="reference" name="referenceFile" accept=".pdf,.zip,.png,.jpg,.jpeg"><br><br>
+        </article>
+      </section>
+
+      <!-- Timeline and Expectations -->
+      <section id="expectation" style="margin-bottom: 30px;">
+        <h2 style="border-bottom: 2px solid #0066cc; padding-bottom: 5px;">Timeline and Expectations</h2>
+        <article style="line-height: 1.8;">
+          <label for="start-date">Start Date:</label><br>
+          <input type="date" id="start-date" name="startDate" style="width:97%; padding:8px;"><br><br>
+
+          <label for="duration-weeks">Expectation Duration (Weeks):</label><br>
+          <input type="number" id="duration-weeks" name="durationWeeks" min="1" placeholder="example: 4 (weeks)" required style="width:97%; padding:8px;"><br><br>
+
+          <label>Preferred Work Mode:</label><br>
+          <input type="checkbox" id="mode-remote" name="workMode[]" value="remote">
+          <label for="mode-remote">Remote</label>
+          <input type="checkbox" id="mode-onsite" name="workMode[]" value="onsite">
+          <label for="mode-onsite">Onsite</label>
+          <input type="checkbox" id="mode-hybrid" name="workMode[]" value="hybrid">
+          <label for="mode-hybrid">Hybrid</label>
+        </article>
       </section>
 
       <div style="text-align:center; margin-top: 20px;">
-        <button type="reset" style="padding: 10px 20px; margin-left: 10px; border: none; border-radius: 5px; cursor: pointer;">Reset</button>        
+        <button type="reset" style="padding: 10px 20px; margin-left: 10px; border: none; border-radius: 5px; cursor: pointer;">Reset</button>
         <button type="submit" style="background-color: #0066cc; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Kirim</button>
       </div>
     </form>
-</main>
+  </main>
 
   <footer style="background-color: #eee; text-align: center; padding: 10px;">
     <p>© 2025 Latihan HTML — Beranda</p>
@@ -108,4 +132,3 @@
 
 </body>
 </html>
-
