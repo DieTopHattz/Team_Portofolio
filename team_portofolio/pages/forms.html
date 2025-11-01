@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+</head>
+<body style="margin:0; padding:0; background: white; color: black;">
+
+    <header style = "background-color: blue; color: white; text-align: center; padding: 20px;">
+      <h1>Student Registration Form</h1>
+      <nav style = "margin-top: 10px;">
+      <span style = "margin-right:20px"><a href = "#pinformation" style = "color: white;text-decoration: none;">Personal Information</a></span>
+      <span style = "margin-right:20px"><a href = "#acinformation" style = "color: white;text-decoration: none;">Academic Information</a></span>
+      <span style = "margin-right:20px"><a href = "#adinformation" style = "color: white;text-decoration: none;">Additional Information</a></span>
+        </nav>
+    </header>
+
+<main style="max-width: 700px; margin: 30px auto; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px gray;">
+    <form action="#" method="post">
+
+      <!--Personal Information-->
+      <section id="pinformation" style="margin-bottom: 30px;">
+        <h2 style="border-bottom: 2px solid #0066cc; padding-bottom: 5px;">Personal Information</h2>
+        <article style="line-height: 1.8;">
+          <label for="name">Full Name:</label><br>
+          <input type="text" required = "This field is required" id="name" name="name" placeholder="Enter your full name" style="width:97%; padding:8px;"><br><br>
+
+          <label for="NISN">NISN:</label><br>
+          <input type="number" min ="0" max="10" required = "This field is required" id="NISN" name="NISN" placeholder="Enter your NISN" style="width:97%; padding:8px;"><br><br>
+
+          <label for ="birthdate">Tanggal Lahir:</label><br>
+          <input type ="date" id ="birthdate" name ="birthdate" style="width:97%; padding:8px;"><br><br>
+
+          <label>Gender:</label><br>
+          <input type ="radio" style="transform: scale(1.2);" id ="Laki-Laki" name="gender" value="Laki-Laki"><label for="Laki-Laki">Laki-Laki</label>
+          <input type ="radio" style="transform: scale(1.2);" id ="Perempuan" name="gender" value="Perempuan"><label for="Perempuan">Perempuan</label><br><br>
+
+          <label for ="agama">Religion:</label><br>
+          <select id ="agama" name ="agama" required = "" style ="width: 100%; height: 35px;">
+            <option value="Islam">Islam</option>
+            <option value="Kristen Katolik">Kristen Katolik</option>
+            <option value="Kristen Protestan">Kristen Protestan</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Budha">Budha</option>
+            <option value="Konghucu">Konghucu</option>
+          </select><br><br>
+
+          <label for="address">Address:</label><br>
+          <input type="text" required = "This field is required" id="address" name="address" placeholder="Enter your Address" style="width:97%; padding:8px;"><br><br>
+
+          <label for="phnum">Phone number:</label><br>
+          <input type="tel" required = "This field is required" id="phnum" name="phnum" placeholder="Enter your Phone Number" style="width:97%; padding:8px;"><br><br>
+
+          <label for="KTP">National ID number:</label><br>
+          <input type="number" min ="0" max ="16" required = "" id="KTP" name="KTP" placeholder="Enter your ID Number" style="width:97%; padding:8px;"><br><br>
+
+      <!--Academic Innformation-->>
+      <section id="acinformation" style="margin-bottom: 30px;">
+        <h2 style="border-bottom: 2px solid #0066cc; padding-bottom: 5px;">Academic Information</h2>
+        <article style="line-height: 1.8;">
+          <label for="lastschool">Previous School:</label><br>
+          <input type="text" required = "" id="lastschool" name="lastschool" placeholder="Enter your Previous School" style="width:97%; padding:8px;"><br><br>
+
+          <label for="schooladd">Previous School:</label><br>
+          <input type="text" required = "" id="schooladd" name="schooladd" placeholder="Enter your School Adress" style="width:97%; padding:8px;"><br><br>  
+          
+          <label for ="major">Major:</label><br>
+          <select id ="major" name ="major" required = "" style ="width: 100%; height: 35px;">
+            <option value="IPA">IPA</option>
+            <option value="IPS">IPS</option>
+            <option value="Sastra">Sastra</option>
+          </select><br><br>
+
+          <label for ="diploma">Last Diploma:</label>
+          <input type = "file" name = "diploma"><br><br>
+      </section>
+
+
+
+      <!--Additional Information-->
+      <section id="adinformation" style="margin-bottom: 30px;">
+        <h2 style="border-bottom: 2px solid #0066cc; padding-bottom: 5px;">Additional Information</h2>
+        <article style="line-height: 1.8;">
+          <label for="parent">Parent's/Guardians Name:</label><br>
+          <input type="text" required = "" id="parent" name="parent" placeholder="Enter your Parent or Guardian Name" style="width:97%; padding:8px;"><br><br>       
+
+          <label for="parentoccupation">Parent's/Guardians Name:</label><br>
+          <input type="text" required = "" id="parentoccupation" name="parentoccupation" placeholder="Enter Parent or Guardian Occupation" style="width:97%; padding:8px;"><br><br>
+
+          <label for="parentconcact">Parent's/Guardians Name:</label><br>
+          <input type="text" required = "" id="parentconcact" name="parentconcact" placeholder="Enter your Parent or Guardian Concact" style="width:97%; padding:8px;"><br><br>
+
+          <label for ="medical">Medical Condition:</label><br>
+          <textarea id="medical" name = "medical" rows="10" cols="92" width="100%"></textarea>
+      </section>
+
+      <div style="text-align:center; margin-top: 20px;">
+        <button type="reset" style="padding: 10px 20px; margin-left: 10px; border: none; border-radius: 5px; cursor: pointer;">Reset</button>        
+        <button type="submit" style="background-color: #0066cc; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Kirim</button>
+      </div>
+    </form>
+</main>
+
+  <footer style="background-color: #eee; text-align: center; padding: 10px;">
+    <p>© 2025 Latihan HTML — Beranda</p>
+  </footer>
+
+</body>
+</html>
+
